@@ -20,3 +20,6 @@ FULL RESPONSE:  GenerateContentResponse {
   }
 }
 IA RESPONSE:  Paralelismo em APIs aumenta a capacidade de resposta e o rendimento, permitindo que múltiplas tarefas sejam executadas simultaneamente. Estratégias como multithreading, async/await e microsserviços podem ser aplicadas para otimizar o desempenho. No entanto, é crucial gerenciar a concorrência para evitar race conditions e deadlocks.
+
+## Sobre o que sao saidas estruturadas
+Utilizando ferramentas como JSONMode e StructuredOutputs, para facilitar integracao com banco de dados
