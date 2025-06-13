@@ -1,25 +1,42 @@
-# Criacao de api de geracao de texto
+# 🚀 API de Geração de Texto com IA
 
-# Exemplo de resposta
+Bem-vindo(a) ao repositório da nossa API de Geração de Texto com IA! Esta API utiliza modelos avançados de linguagem para gerar conteúdo dinâmico e relevante, otimizando a integração com seus sistemas e bancos de dados.
 
-FULL RESPONSE:  GenerateContentResponse {
-  candidates: [
+---
+
+# Meu Projeto
+
+> **🚧 AVISO: Em Construção! 🚧**
+> Este projeto está ativamente em desenvolvimento. Conteúdo e funcionalidades podem ser alterados a qualquer momento.
+
+---
+
+## ⚡ Exemplo de Resposta da API
+
+Ao fazer uma requisição à API, você receberá uma resposta detalhada como a seguinte:
+
+{
+  "message": [
     {
-      content: [Object],
-      finishReason: 'STOP',
-      avgLogprobs: -0.18938476509518093
+      "produtos": [
+        "Aveia",
+        "Maçã",
+        "Banana"
+      ]
     }
-  ],
-  modelVersion: 'gemini-2.0-flash',
-  usageMetadata: {
-    promptTokenCount: 35,
-    candidatesTokenCount: 72,
-    totalTokenCount: 107,
-    promptTokensDetails: [ [Object] ],
-    candidatesTokensDetails: [ [Object] ]
-  }
+  ]
 }
-IA RESPONSE:  Paralelismo em APIs aumenta a capacidade de resposta e o rendimento, permitindo que múltiplas tarefas sejam executadas simultaneamente. Estratégias como multithreading, async/await e microsserviços podem ser aplicadas para otimizar o desempenho. No entanto, é crucial gerenciar a concorrência para evitar race conditions e deadlocks.
 
-## Sobre o que sao saidas estruturadas
-Utilizando ferramentas como JSONMode e StructuredOutputs, para facilitar integracao com banco de dados
+---
+
+## Sobre o que são Saídas Estruturadas
+Utilizando ferramentas como **JSONMode** e **StructuredOutputs**, para facilitar integração com banco de dados.
+
+---
+
+## Function Calling
+
+Estruturei de o modelo verificar a instrução do usuário, e com isso decidir qual método ele deveria chamar para executar o que o usuário precisava, por exemplo:
+
+**has_stock** e **empty_stock**: ele pode validar os produtos se estão em estoque de acordo com a necessidade dele ou não, e depois chamamos o modelo novamente para estruturar a resposta de acordo com o que foi pedido pelo o usuário depois de validar no mock de "banco que criamos".
+
